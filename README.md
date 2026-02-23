@@ -48,4 +48,4 @@ npm run dev
 - Location-based matching
 
 ## Author
-Mauni
+Maunika
