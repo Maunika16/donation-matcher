@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Palette */
+  --cream:        #faf7f2;
+  --cream-2:      #f2ede4;
+  --cream-3:      #e8e0d4;
+  --charcoal:     #1c1a18;
+  --charcoal-2:   #3a3632;
+  --charcoal-3:   #6b6460;
+  --terracotta:   #c4603a;
+  --terra-light:  rgba(196,96,58,0.1);
+  --terra-glow:   rgba(196,96,58,0.2);
+
+  /* Category colours */
+  --cat-food:       #d97a3a;
+  --cat-clothing:   #5b8fa8;
+  --cat-education:  #7a6abf;
+  --cat-kids:       #c4774a;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Outfit', sans-serif;
+
+  /* Radii */
+  --r-sm:  6px;
+  --r-md:  12px;
+  --r-lg:  20px;
+  --r-xl:  28px;
+
+  /* Shadows */
+  --shadow-sm:  0 2px 8px rgba(28,26,24,0.07);
+  --shadow-md:  0 6px 24px rgba(28,26,24,0.1);
+  --shadow-lg:  0 16px 48px rgba(28,26,24,0.14);
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--charcoal);
+  min-height: 100vh;
+  /* Warm subtle grain texture via SVG */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"),
+    linear-gradient(160deg, #faf7f2 0%, #f5ede2 60%, #efe5d4 100%);
+}
+
+input, button, textarea, select {
+  font-family: var(--font-body);
+}
+
+button { cursor: pointer; }
+
+/* Stagger animation utility */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
